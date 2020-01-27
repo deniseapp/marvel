@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = "1.2.70"
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+
+
+    retrofitVersion = '2.3.0'
+    okHttpVersion = '3.9.0'
+    frescoVersion = '1.10.0'
+
+    //rx
+    rxJavaVersion = '2.1.6'
+    rxAndroidVersion = '2.1.0'
+
+    // di
+    daggerVersion = '2.16'
+    frescoVervion = '1.11.0'
+}
